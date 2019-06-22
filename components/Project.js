@@ -26,7 +26,7 @@ const subtitleStyle = {
   fontSize: '1.3rem'
 }
 
-export default function Index(props) {
+const Project = props => {
   return (
     <Layout>
       <h1 style={mainHeaderStyle}>{props.title}</h1>
@@ -43,3 +43,5 @@ export default function Index(props) {
     </Layout>
   );
 }
+
+export default Project;

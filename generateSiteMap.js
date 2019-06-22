@@ -15,7 +15,7 @@ function walk(dir) {
         // Construct this file's pathname excluding the "pages" folder & its extension
         const cleanFileName = filePath
             .substr(0, filePath.lastIndexOf("."))
-            .replace("pages/", "");
+            .replace('pages/', '');
 
         // Add this file to `siteMapObj`
         siteMapObj[`/${cleanFileName}`] = {
@@ -28,14 +28,14 @@ function walk(dir) {
 
 function formatDate(date) {
     var d = new Date(date),
-      month = "" + (d.getMonth() + 1),
-      day = "" + d.getDate(),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
       year = d.getFullYear();
 
-    if (month.length < 2) month = "0" + month;
-    if (day.length < 2) day = "0" + day;
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
 
-    return [year, month, day].join("-");
+    return [year, month, day].join('-');
   };
 
 const siteMapObj = {};
@@ -48,7 +48,7 @@ let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 for (let path in siteMapObj) {
 sitemapXml += `
     <url>
-        <loc>https://cmartin.co${path}</loc>
+        <loc>https://www.cmartin.co${path}</loc>
         <lastmod>${
         formatDate(new Date(siteMapObj[path].lastModified))
         }</lastmod>
@@ -59,4 +59,8 @@ sitemapXml += `
 </urlset>`;
 
 
-fs.writeFileSync("out/sitemap.xml", sitemapXml);
+fs.writeFileSync('out/sitemap.xml', sitemapXml);
+fs.writeFileSync('out/robots.txt', `Sitemap: http://www.cartin.co/sitemap.xml
+User-agent:*
+Allow:
+`)

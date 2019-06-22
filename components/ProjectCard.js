@@ -13,7 +13,7 @@ const projectTitleStyle = {
   margin: '0px'
 }
 
-const Project = props => (
+const ProjectCard = props => (
   <Link href={props.link} passHref>
     <div style={projectCardStyle} className="projectCard">
       <h4 style={projectTitleStyle}>{props.title}</h4>
@@ -26,4 +26,4 @@ const Project = props => (
   </Link>
 )
 
-export default Project;
+export default ProjectCard;
