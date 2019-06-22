@@ -9,7 +9,16 @@ const contentWrapperStyle = {
 const Layout = props => (
   <div>
     <Head>
-      <title>Chris Martin - Full Stack Software Developer</title>
+      <title>Chris Martin - Full Stack Developer</title>
+      <meta name="description" content="Personal website of Chris Martin, Full Stack Developer from Brisbane QLD"/>
+      <meta name="author" content="Chris Martin"/>
+
+      <meta property="og:title" content="Chris Martin"/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:url" content="https://www.cmartin.co"/>
+      <meta property="og:image" content="https://www.cmartin.co/static/code-icon.png"/>
+      <meta property="og:description" content="Chris Martin - Full Stack Developer"/>
+
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137160615-2"></script>
       <script
         dangerouslySetInnerHTML={{
