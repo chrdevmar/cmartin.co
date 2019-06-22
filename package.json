@@ -11,7 +11,7 @@
     "export": "next export",
     "postexport": "node generateSiteMap.js",
     "deploy": "npm run build && npm run export && aws s3 sync ./out s3://cmartin.co/ && npm run invalidate-cloudfront",
-    "invalidate-cloudfront": "aws cloudfront create-invalidation --distribution-id E1L13TVF7G7NI0 --paths /"
+    "invalidate-cloudfront": "aws cloudfront create-invalidation --distribution-id E1L13TVF7G7NI0 --paths '/*'"
   },
   "author": "Chris Martin",
   "license": "ISC",
