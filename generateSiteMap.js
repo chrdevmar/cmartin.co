@@ -60,7 +60,7 @@ sitemapXml += `
 
 
 fs.writeFileSync('out/sitemap.xml', sitemapXml);
-fs.writeFileSync('out/robots.txt', `Sitemap: http://www.cartin.co/sitemap.xml
+fs.writeFileSync('out/robots.txt', `Sitemap: http://www.cmartin.co/sitemap.xml
 User-agent:*
 Allow:
 `)
