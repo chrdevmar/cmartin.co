@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 import Header from './Header';
 
 const contentWrapperStyle = {
@@ -19,7 +18,7 @@ const Layout = props => (
       <meta property="og:image" content="https://www.cmartin.co/static/code-icon.png"/>
       <meta property="og:description" content="Chris Martin - Full Stack Developer"/>
 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137160615-2"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142502032-1"></script>
       <script
         dangerouslySetInnerHTML={{
         __html: `
@@ -27,7 +26,7 @@ const Layout = props => (
         function gtag(){dataLayer.push(arguments)}
         gtag('js', new Date());
 
-        gtag('config', 'UA-137160615-2');
+        gtag('config', 'UA-142502032-1');
       `}}
       />
       <link href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" rel="stylesheet" />
