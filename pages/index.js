@@ -28,10 +28,26 @@ export default function Index() {
       <div style={projectsContainerStyle} className="row">
           <div className="col-xs-12 col-sm-6 col-md-4">
             <ProjectCard
+              title="Crunchy Cloud"
+              link="/crunchy-cloud"
+              description="Bespoke software development"
+              technologies={['Full stack development', 'Architecture design', 'Blockchain']}
+            />
+          </div>
+          <div className="col-xs-12 col-sm-6 col-md-4">
+            <ProjectCard
               title="CSV Hero"
               link="/csv-cleaner-bulk-editor"
               description="CSV Cleaner, Bulk Editor & Query Tool"
               technologies={['react', 'redux', 'aws s3']}
+            />
+          </div>
+          <div className="col-xs-12 col-sm-6 col-md-4">
+            <ProjectCard
+              title="Flexible Crypto Trader"
+              link="/flexible-crypto-trader"
+              description="A framework for building and deploying digital asset traders"
+              technologies={['serverless', 'nodejs', 'aws']}
             />
           </div>
           <div className="col-xs-12 col-sm-6 col-md-4">

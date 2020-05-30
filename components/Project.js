@@ -7,8 +7,8 @@ const linkStyle = {
 
 const imgStyle = {
   maxWidth: '100%',
-  '-webkit-box-shadow': '-5px 5px 26px -22px rgba(69,65,69,1)',
-  '-moz-box-shadow': '-5px 5px 26px -22px rgba(69,65,69,1)',
+  'WebkitBoxShadow': '-5px 5px 26px -22px rgba(69,65,69,1)',
+  'MozBoxShadow': '-5px 5px 26px -22px rgba(69,65,69,1)',
   'box-shadow': '-5px 5px 26px -22px rgba(69,65,69,1)',
 }
 
@@ -33,11 +33,11 @@ const Project = props => {
       <span style={subtitleStyle}>{props.subtitle}</span>
         <p>{props.description}</p>
         {props.links.map(link => (
-            <div>- <Link href={link.href}><a title={link.title} style={linkStyle}>{link.label}</a></Link></div>
+            <div key={link}>- <Link href={link.href}><a title={link.title} style={linkStyle}>{link.label}</a></Link></div>
         ))}
-        <div class="row" style={imgRowStyle}>
-        <div class="col-xs-12 col-md-8">
-            <img style={imgStyle} src={props.img}></img>
+        <div className="row" style={imgRowStyle}>
+        <div className="col-xs-12 col-md-8">
+            <img style={props.imgStyle || imgStyle} src={props.img}></img>
         </div>
         </div>
     </Layout>
